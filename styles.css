@@ -344,7 +344,7 @@ nav {
   padding: 2rem 1rem;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .event-grid {
     grid-template-columns: 1fr;
   }
@@ -366,8 +366,25 @@ nav {
   }
 
   .landing-events {
+    max-width: 900%;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+
+  .landing-events .event-scroll {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    padding: 1rem 0;
+  }
+
+  .landing-events .event-card {
+    flex: 0 0 90%;
+    scroll-snap-align: start;
+    width: auto;
     max-width: 100%;
-    width: 100%;
+    margin: 0 auto;
   }
 
   .landing-events h2 {
