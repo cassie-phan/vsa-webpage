@@ -351,8 +351,29 @@ nav {
   .landing {
     flex-direction: column;
     align-items: center;
+    text-align: center;
     padding: 2rem 1rem;
     gap: 2rem;
+  }
+  
+  .landing-right {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .event-container {
+    max-width: 95%;
+    padding: 1.5rem
+  }
+
+  .event-container .event-scroll {
+    gap: 0.5rem;
+  }
+
+  .event-container .event-card {
+    flex: 0 0 100%;
+    max-width: 280px;
+    margin: 0 auto;
   }
 
   .landing-text {
@@ -363,32 +384,6 @@ nav {
 
   .landing .social-buttons {
     justify-content: center;
-  }
-
-  .landing-events {
-    max-width: 900%;
-    margin: 0 auto;
-    padding: 1rem;
-  }
-
-  .landing-events .event-scroll {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: 1rem;
-    padding: 1rem 0;
-  }
-
-  .landing-events .event-card {
-    flex: 0 0 90%;
-    scroll-snap-align: start;
-    width: auto;
-    max-width: 100%;
-    margin: 0 auto;
-  }
-
-  .landing-events h2 {
-    text-align: center;
   }
 
   .event-scroll {
