@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WashU VSA</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     html {
       scroll-behavior: smooth;
@@ -18,50 +19,71 @@
     </div>
     <div class="nav-links">
       <a href="events.html">Events</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#exec">Exec</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="exec.html">Exec</a>
     </div>
   </nav>
 
   <section class="landing">
-    <h1>Welcome to WashU VSA</h1>
-    <div class="social-buttons">
-      <a href="https://discord.com/invite/HemFAhNDWm" target="_blank">Discord</a> 
-      <a href="https://www.instagram.com" target="_blank">Instagram</a>
-      <a href="https://www.tiktok.com" target="_blank">TikTok</a>
+    <div class="landing-left">
+      <h1>Welcome to WashU VSA</h1>
+      <h3><i>Join our Discord for the latest communications!</i></h3>
+      <div class="social-buttons">
+        <a href="https://discord.com/invite/HemFAhNDWm" target="_blank"><i class="fab fa-discord"></i></a>
+        <a href="https://www.instagram.com/washuvsa" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+
+    <div class="landing-right events-preview fade-in event-container">
+      <h2>Upcoming Events</h2>
+      <p class="click-note">Click to learn more</p>
+      <div class="event-scroll">
+        <div class="event-card">
+          <h3>Activities Fair</h3>
+          <p>Fri, Aug 29</p>
+          <p>2 - 4 PM</p>
+          <p>@ Mudd Field</p>
+        </div>
+        <div class="event-card">
+          <h3>Fall GBM</h3>
+          <p>Fri, Sept 5</p>
+          <p>5 - 6:30 PM</p>
+          <p>@ Ursa's Fireside</p>
+        </div>
+        <div class="event-card">
+          <h3>VSA by Night</h3>
+          <p>???</p>
+          <p>Stay tuned for details...</p>
+        </div>
+        <div class="event-card">
+          <h3>Hehehe</h3>
+          <p>SEPT 13–14</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="home fade-in" id="about">
+  <section id="about" class="about-section fade-in">
     <h2>About Us</h2>
     <p>
-      The Vietnamese Student Association at Washington University in St. Louis is a cultural and social organization dedicated to celebrating Vietnamese heritage, building community, and fostering inclusivity on campus.
-    </p>
+    VSA is the premier outlet to celebrate Vietnamese Culture on Wash U’s campus. We are a Cultural and Diversity Group with a focus on advocacy, inclusion, and leadership. Our mission is to unite students through Vietnamese Culture and to build a community of International students, Vietnamese-American students, and anyone with an interest in learning more about Vietnamese culture. Events and meetings shall strive to meet this purpose.</p>
   </section>
-  <section class="events fade-in" id="events">
-  <section class="events" id="events">
-    <h2>Upcoming Events</h2>
-    <p class="click-note">Click to learn more</p>
-    <div class="event-scroll">
-      <div class="event-card">
-        <h3>Activities Fair</h3>
-        <p>AUG 29</p>
-      </div>
-      <div class="event-card">
-        <h3>General Body Meeting</h3>
-        <p>SEPT 5</p>
-        <p>5 - 6:30 PM</p>
-      </div>
-      <div class="event-card">
-        <h3>Hehe</h3>
-        <p>SEPT 8–12</p>
-      </div>
-      <div class="event-card">
-        <h3>Hehehe</h3>
-        <p>SEPT 13–14</p>
-      </div>
+
+  <section id="contact-us" class="contact-section fade-in">
+    <h2>Contact Us</h2>
+    <p>If you have any questions or want to get involved, please fill out the form below!</p>
+    
+    <div class="google-form-container">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdSaD8GSptdPOKimzBHeSPEz1onlGQ_wpQ8hNkKChO6daybhw/viewform?embedded=true" 
+        width="640" 
+        height="381" 
+        frameborder="0" 
+        marginheight="0" 
+        marginwidth="0">
+        Loading…
+      </iframe>
     </div>
-  </section>
   </section>
 
   <script>

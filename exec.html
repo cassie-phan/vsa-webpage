@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WashU VSA - Exec Board</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">
+      <a href="index.html"><img src="images/logo.png" alt="WashU VSA Logo"></a>
+    </div>
+    <div class="nav-links">
+      <a href="events.html">Events</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="exec.html">Exec</a>
+    </div>
+  </nav>
+
+  <section class="exec-`hero fade-in">
+    <img src="images/exec.jpg" alt="VSA Exec 2025 Group Photo" class="group-photo fade-in">
+    <h2>Meet Our Exec Board</h2>
+  </section>
+
+  <section class="exec-grid-section">
+    <div class="exec-grid">
+      <div class="exec-card fade-in">
+        <img src="images/member1.jpg" alt="Member 1" class="exec-photo">
+        <h3>Member Name</h3>
+        <p>President</p>
+      </div>
+
+      <div class="exec-card fade-in">
+        <img src="images/member2.jpg" alt="Member 2" class="exec-photo">
+        <h3>Member Name</h3>
+        <p>Vice President</p>
+      </div>
+
+      <!-- Add more exec-card blocks for each member -->
+
+    </div>
+  </section>
+
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+  </script>
+</body>
+</html>
