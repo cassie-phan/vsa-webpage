@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WashU VSA - Events</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">
+      <a href="index.html"><img src="images/logo.png" alt="WashU VSA Logo"></a>
+    </div>
+    <div class="nav-links">
+      <a href="events.html">Events</a>
+      <a href="index.html#gallery">Gallery</a>
+      <a href="index.html#exec">Exec</a>
+    </div>
+  </nav>
+
+  <section class="timeline" id="events">
+    <h2>Upcoming Events</h2>
+  
+    <div class="timeline-container fade-in">
+      <div class="timeline-item">
+        <div class="timeline-dot"><span>FRI,<br>AUG<br>29</span></div>
+        <div class="timeline-content">
+          <h3>Activities Fair</h3>
+          <p><i>2 - 4 PM @ Mudd Field</i> <br> Come find the VSA booth and sign up to be a member!</p>
+        </div>
+      </div>
+  
+      <div class="timeline-item">
+        <div class="timeline-dot"><span>FRI,<br>SEPT<br>5</span></div>
+        <div class="timeline-content">
+          <h3>General Body Meeting</h3>
+          <p>5 – 6:30 PM @ Ursa's Fireside | Meet the board, hear about the year, enjoy food, and grab dinner!</p>
+        </div>
+      </div>
+  
+      <div class="timeline-item">
+        <div class="timeline-dot"><span>???</span></div>
+        <div class="timeline-content">
+          <h3>VSA by Night Formal</h3>
+          <p>Third annual formal! Stay tuned for details...</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="past-events">
+    <!-- make all pictures the same size -->
+    <h2>Previous Events</h2>
+    <div class="event-grid">
+    <div class="event-block">
+      <img src="images/fall-gbm.JPG" alt="Fall GBM" class="event-image">
+      <div class="event-description">
+        <h3>Fall GBM</h3>
+        <p>Our first general body meeting of the fall! After welcoming new and returning members, we headed to Mai Lee for dinner together.</p>
+      </div>
+    </div>
+
+    <div class="event-block">
+      <img src="images/acce-reveal.jpg" alt="ACCE Reveals" class="event-image">
+      <div class="event-description">
+        <h3>ACCE Reveals</h3>
+        <p>ACCE (VSA's big-little program) reveals! Littles went on scavenger hunts to meet their new bigs!</p>
+      </div>
+    </div>
+
+    <div class="event-block fade-in">
+      <img src="images/vsa-by-night.jpg" alt="VSA By Night" class="event-image fade-in">
+      <div class="event-description fade-in">
+        <h3>VSA x AMA by Night</h3>
+        <p>Our second annual formal and our biggest event of the fall semester!</p>
+      </div>
+    </div>
+
+    <div class="event-block fade-in">
+      <img src="images/hat-painting.jpg" alt="Hat Painting" class="event-image fade-in">
+      <div class="event-description fade-in">
+        <h3>Hat Painting & Keychain Making</h3>
+        <p>Eat some egg rolls and sesame balls while painting a nón lá and making keychains!</p>
+      </div>
+    </div>
+
+    <div class="event-block fade-in">
+      <img src="images/slu-x-vsa.jpg" alt="WASHU x SLU" class="event-image fade-in">
+      <div class="event-description fade-in">
+        <h3>WashU x SLU VSA Holiday Collab</h3>
+        <p>Annual collab with SLU VSA! Gingerbread house competition and more.</p>
+      </div>
+    </div>
+
+    <div class="event-block fade-in">
+      <img src="images/spring-rolls.jpg" alt="Spring Rolls Night" class="event-image fade-in">
+      <div class="event-description fade-in">
+        <h3>Spring Rolls, Smiskis, & Sonny Angels Night</h3>
+        <p>Eat some spring rolls while trading your Smiskis & Sonny's!</p>
+      </div>
+    </div>
+
+    <div class="event-block fade-in">
+      <img src="images/byobm.jpg" alt="Build Your Own Banh Mi" class="event-image fade-in">
+      <div class="event-description fade-in">
+        <h3>Build Your Own Bánh Mì</h3>
+        <p>As explained in the name: build your own bánh mì with ingredients all supplied by VSA!</p>
+      </div>
+    </div>
+
+    <div class="event-block fade-in">
+      <img src="images/pho-night.jpg" alt="Pho Night" class="event-image fade-in">
+      <div class="event-description fade-in">
+        <h3>Phở Night</h3>
+        <p>Our biggest event of the spring semesters! Feeding 300+ people phở ᕦ(ò_óˇ)ᕤ</p>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+    };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+    });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+    });
+  </script>
+</body>
+</html>
